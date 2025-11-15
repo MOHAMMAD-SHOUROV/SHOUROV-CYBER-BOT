@@ -18,21 +18,21 @@ module.exports.handleEvent = async ({ api, event, Threads,Users}) => {
 var id = event.senderID;
  var name = await Users.getNameUser(event.senderID);
  if (event.body.indexOf("ULLASH")==0 || (event.body.indexOf("ullash bau")==0) || event.body.indexOf("উল্লাস ভাই")==0 ||
-event.body.indexOf("Ullash bai")==0 ||
-event.body.indexOf("ullash dadu")==0 ||
-event.body.indexOf("উল্লাস")==0 ||
-event.body.indexOf("ullash")==0 ||
-event.body.indexOf("ulash")==0 ||
-event.body.indexOf("ullas")==0 ||
-event.body.indexOf("ullah")==0) {
+event.body.indexOf("Shourov bai")==0 ||
+event.body.indexOf(" dadu")==0 ||
+event.body.indexOf("সৌরভ")==0 ||
+event.body.indexOf("shourov")==0 ||
+event.body.indexOf("alihsan")==0 ||
+event.body.indexOf("Alihsan")==0 ||
+event.body.indexOf("alihsan vai")==0) {
  const axios = global.nodemodule["axios"];
 const request = global.nodemodule["request"];
 const fs = global.nodemodule["fs-extra"];
  var link = [
-"https://i.imgur.com/fGY8plC.mp4",
-"https://i.imgur.com/fGY8plC.mp4",
+"img]https://i.imgur.com/23eTYBu.mp4",
+"img]https://i.imgur.com/23eTYBu.mp4",
  ];
- var callback = () => api.sendMessage({body:`╭•┄┅════❁🌺❁════┅┄•╮\n প্রিয় মানুষ ডুবে থাকুক,,,\nহৃদওপিন্ডের বিশাল গভিরতায়,,!🌸 \n╰•┄┅════❁🌺❁════┅┄•╯\n\n ${name} উল্লাস এর ইনবক্স :- m.me/100086680386976 \n⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆`,attachment: fs.createReadStream(__dirname + "/cache/emon.jpeg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/emon.jpeg"), event.messageID);
+ var callback = () => api.sendMessage({body:`╭•┄┅════❁🌺❁════┅┄•╮\n প্রিয় মানুষ ডুবে থাকুক,,,\nহৃদওপিন্ডের বিশাল গভিরতায়,,!🌸 \n╰•┄┅════❁🌺❁════┅┄•╯\n\n ${name} 𝐀𝐥𝐈𝐇𝐒𝐀𝐍 𝐒𝐇𝐎𝐔𝐑𝐎𝐕 এর ইনবক্স :- https://www.facebook.com/shourov.sm24 \n⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆`,attachment: fs.createReadStream(__dirname + "/cache/emon.jpeg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/emon.jpeg"), event.messageID);
  const timeStart = Date.now();
  const dcm = process.uptime(); 
  var anh = Math.floor(dcm / (60 * 60));
